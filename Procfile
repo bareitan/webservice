@@ -1,1 +1,1 @@
-web: java -cp target/classes/;target/dependency/* com.bareitan.videorent.MovieRent
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* MovieRent
