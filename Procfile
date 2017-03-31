@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* webservice
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* MovieRent
