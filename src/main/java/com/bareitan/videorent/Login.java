@@ -29,6 +29,7 @@ public class Login {
         Connection connection = null;
         PreparedStatement userLookup = null;
         LoginResponse loginResponse = null;
+        int userId = -1;
         if(email != "" || password != "") {
             try {
                 connection = DBConnection.createConnection();
@@ -45,14 +46,15 @@ public class Login {
                     if (rs.getBoolean("isAdmin")) {
                         isAdmin = true;
                     }
+                    userId = rs.getInt("UserID");
                 }
                 if (count == 1) {
-                    loginResponse = new LoginResponse(true, isAdmin, "");
+                    loginResponse = new LoginResponse(true, isAdmin, "",userId);
                 } else {
-                    loginResponse = new LoginResponse(false, false, "Incorrect Email or Password");
+                    loginResponse = new LoginResponse(false, false, "Incorrect Email or Password",userId);
                 }
             } catch (Exception e) {
-                loginResponse = new LoginResponse(false, false, e.toString());
+                loginResponse = new LoginResponse(false, false, e.toString(),userId);
             } finally {
                 if (connection != null) {
                     try {
@@ -63,7 +65,7 @@ public class Login {
                 }
             }
         }else {
-            loginResponse = new LoginResponse(false,false,"Email or password not specified");
+            loginResponse = new LoginResponse(false,false,"Email or password not specified",userId);
         }
         return gson.toJson(loginResponse);
     }
@@ -75,9 +77,11 @@ class LoginResponse {
     public Boolean loginSucceeded;
     public Boolean isAdmin;
     public String error;
-    public LoginResponse(Boolean loginSucceeded,Boolean isAdmin,String error){
+    public int userID;
+    public LoginResponse(Boolean loginSucceeded,Boolean isAdmin,String error, int userID){
         this.loginSucceeded = loginSucceeded;
         this.isAdmin = isAdmin;
         this.error = error;
+        this.userID = userID;
     }
 }

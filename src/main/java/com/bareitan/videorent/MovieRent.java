@@ -17,6 +17,8 @@ public class MovieRent extends Application{
         h.add( Register.class );
         h.add( Login.class );
         h.add(Movies.class);
+        h.add(Rent.class);
+        h.add(Categories.class);
         return h;
     }
 }
