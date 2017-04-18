@@ -9,10 +9,7 @@ import java.sql.Connection;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 
@@ -63,21 +60,33 @@ public class Movies {
 
 
     @GET
-    @Path("/getAllMovies")
+    @Path("/getMovieByCategory/{category}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getAllMovies() {
+    public String getMovieByCategory(@PathParam("category") String category) {
 
         Gson gson = new Gson();
         Connection connection;
-        PreparedStatement getAllStatement;
+        PreparedStatement selectCategory;
         ArrayList<Movie> movies = new ArrayList<Movie>();
 
 
         try {
             connection = DBConnection.createConnection();
-            getAllStatement = connection.prepareStatement("SELECT * FROM movies AS M " +
-                    "LEFT JOIN categories AS C ON M.CategoryID=C.CategoryID");
-            ResultSet rs = getAllStatement.executeQuery();
+            String select = "SELECT * FROM movies AS M " +
+                    "LEFT JOIN categories AS C ON M.CategoryID=C.CategoryID";
+            if(!category.equals("All"))
+            {
+                select +=" WHERE C.CategoryName=?";
+                selectCategory = connection.prepareStatement(select);
+                selectCategory.setString(1, category);
+
+            }else{
+                selectCategory = connection.prepareStatement(select);
+            }
+
+
+
+            ResultSet rs = selectCategory.executeQuery();
             while (rs.next()) {
                 movies.add(
                         new Movie(
@@ -99,9 +108,10 @@ public class Movies {
             hm.put("Movies", movies);
             return gson.toJson(hm);
         } else {
-            return gson.toJson("Couldn't fetch movies");
+            return gson.toJson("Couldn't fetch  by category");
         }
     }
+
 
 
     @GET
@@ -111,13 +121,44 @@ public class Movies {
                            @QueryParam("overview") String overview,
                            @QueryParam("stock") Integer stock,
                            @QueryParam("thumbnail") String thumbnail,
-                           @QueryParam("categoryId") Integer categoryId)
+                           @QueryParam("categoryName") String categoryName)
     {
         Gson gson = new Gson();
         Connection connection;
         PreparedStatement insertMovie;
+        PreparedStatement selectCategory;
+        PreparedStatement insertCategory;
+        int categoryId = -1;
         try {
             connection = DBConnection.createConnection();
+
+            selectCategory = connection.prepareStatement(
+                    "SELECT CategoryID from categories where CategoryName LIKE ?");
+            selectCategory.setString(1, categoryName);
+
+
+            ResultSet rs = selectCategory.executeQuery();
+            if(rs.next())
+            {
+                categoryId= rs.getInt("CategoryID");
+            }
+
+            if(categoryId==-1)
+            {
+                insertCategory = connection.prepareStatement(
+                        "INSERT INTO categories(CategoryName)" +
+                                "VALUES (?)", Statement.RETURN_GENERATED_KEYS);
+                insertCategory.setString(1, categoryName);
+
+                int records = insertCategory.executeUpdate();
+                if (records > 0) {
+                    ResultSet keysSet = insertCategory.getGeneratedKeys();
+                    keysSet.next();
+                    categoryId = keysSet.getInt(1);
+                }
+            }
+
+
             insertMovie = connection.prepareStatement(
                     "INSERT INTO movies(MovieName, Overview, Stock, CategoryID,Thumbnail)" +
                     "VALUES (?,?,?,?,?)");

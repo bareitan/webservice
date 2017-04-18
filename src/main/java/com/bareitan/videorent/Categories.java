@@ -34,7 +34,7 @@ public class Categories {
         Gson gson = new Gson();
         Connection connection;
         PreparedStatement getAllStatement;
-        String error;
+
         ArrayList<Category> categories = new ArrayList<Category>();
         try {
             connection = DBConnection.createConnection();
@@ -47,27 +47,25 @@ public class Categories {
                 categories.add(category);
             }
 
-        } catch (Exception e) {
-            e.printStackTrace();
-            error = e.getLocalizedMessage();
-        }
-        if (categories.size() > 0) {
             HashMap hm = new HashMap();
             hm.put("Categories", categories);
             return gson.toJson(hm);
-        } else {
-            error ="Couldn't fetch categories";
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            JSONObject response = new JSONObject();
+            response.put("error", e.getLocalizedMessage());
+            return response.toJSONString();
         }
-        JSONObject response = new JSONObject();
-        response.put("error", error);
-        return response.toJSONString();
+
     }
 
 
     @GET
     @Path("/addCategory")
     @Produces(MediaType.APPLICATION_JSON)
-    public String addMovie(@QueryParam("categoryName") String categoryName)
+    public String addCategory(@QueryParam("categoryName") String categoryName)
     {
         Connection connection;
         Boolean added = false;
@@ -88,7 +86,7 @@ public class Categories {
                 keysSet.next();
                 categoryID = keysSet.getInt(1);
             } else {
-                error = "Couldn't add movie";
+                error = "Couldn't add category";
             }
         }catch (Exception e) {
             e.printStackTrace();
