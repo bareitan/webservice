@@ -63,11 +63,11 @@ public class Movies {
     @Path("/getMovieByCategory/{category}")
     @Produces(MediaType.APPLICATION_JSON)
     public String getMovieByCategory(@PathParam("category") String category) {
-
         Gson gson = new Gson();
         Connection connection;
         PreparedStatement selectCategory;
         ArrayList<Movie> movies = new ArrayList<Movie>();
+        String error = "";
 
 
         try {
@@ -101,15 +101,12 @@ public class Movies {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            error = e.getLocalizedMessage();
         }
-        if (movies.size() > 0) {
             HashMap hm = new HashMap();
             hm.put("Movies", movies);
+            hm.put("error",error);
             return gson.toJson(hm);
-        } else {
-            return gson.toJson("Couldn't fetch  by category");
-        }
     }
 
 
@@ -128,6 +125,7 @@ public class Movies {
         PreparedStatement insertMovie;
         PreparedStatement selectCategory;
         PreparedStatement insertCategory;
+        MovieResponse movieResponse;
         int categoryId = -1;
         try {
             connection = DBConnection.createConnection();
@@ -171,14 +169,14 @@ public class Movies {
 
             int records = insertMovie.executeUpdate();
             if (records > 0) {
-                return gson.toJson("Movie was added successfully.");
+                movieResponse = new MovieResponse(true, "");
             } else {
-                return gson.toJson("Couldn't add movie");
+                movieResponse = new MovieResponse(true, "Couldn't add movie.");
             }
         }catch (Exception e) {
-            e.printStackTrace();
-            return gson.toJson("Couldn't add movie");
+            movieResponse = new MovieResponse(true, e.getLocalizedMessage());
         }
+        return gson.toJson(movieResponse);
     }
 
 
@@ -190,31 +188,79 @@ public class Movies {
                            @QueryParam("overview") String overview,
                            @QueryParam("stock") Integer stock,
                            @QueryParam("thumbnail") String thumbnail,
-                           @QueryParam("categoryId") Integer categoryId)
+                           @QueryParam("categoryName") String categoryName)
     {
         Gson gson = new Gson();
         Connection connection;
         PreparedStatement updateMovie;
+        PreparedStatement selectCategory;
+        PreparedStatement insertCategory;
+        PreparedStatement stockSelect;
         MovieResponse movieResponse;
+        String error="";
+        int categoryId = -1;
         try {
             connection = DBConnection.createConnection();
-            updateMovie = connection.prepareStatement(
-                    "UPDATE movies set MovieName=?, Overview=?, Stock=?, CategoryID=?, Thumbnail=?" +
-                            "where MovieID=?" );
-            updateMovie.setString(1, movieName);
-            updateMovie.setString(2, overview);
 
-            updateMovie.setInt(3, stock);
-            updateMovie.setInt(4, categoryId);
-            updateMovie.setString(5, thumbnail);
-            updateMovie.setString(6, movieId);
+            selectCategory = connection.prepareStatement(
+                    "SELECT CategoryID from categories where CategoryName LIKE ?");
+            selectCategory.setString(1, categoryName);
 
-            int records = updateMovie.executeUpdate();
+
+            ResultSet rs = selectCategory.executeQuery();
+            if(rs.next())
+            {
+                categoryId= rs.getInt("CategoryID");
+            }
+
+            if(categoryId==-1)
+            {
+                insertCategory = connection.prepareStatement(
+                        "INSERT INTO categories(CategoryName)" +
+                                "VALUES (?)", Statement.RETURN_GENERATED_KEYS);
+                insertCategory.setString(1, categoryName);
+
+                int records = insertCategory.executeUpdate();
+                if (records > 0) {
+                    ResultSet keysSet = insertCategory.getGeneratedKeys();
+                    keysSet.next();
+                    categoryId = keysSet.getInt(1);
+                }
+            }
+
+            stockSelect = connection.prepareStatement("" +
+                    "SELECT COUNT(*) FROM rents WHERE MovieID=? AND ReturnDate IS NULL");
+            stockSelect.setString(1, movieId.toString());
+            rs = stockSelect.executeQuery();
+            int rentedMovies = -1;
+            if (rs.next()) {
+                rentedMovies = rs.getInt(1);
+            } else {
+                error = "Couldn't check the stock.";
+            }
+            if(rentedMovies!=-1 && rentedMovies>stock)
+            {
+                error="New stock is below the number of rented movies. ( " + rentedMovies + ")";
+            }
+            int records = -1;
+            if(error=="") {
+                updateMovie = connection.prepareStatement(
+                        "UPDATE movies SET MovieName=?, Overview=?, Stock=?, CategoryID=?, Thumbnail=?" +
+                                "WHERE MovieID=?");
+                updateMovie.setString(1, movieName);
+                updateMovie.setString(2, overview);
+
+                updateMovie.setInt(3, stock);
+                updateMovie.setInt(4, categoryId);
+                updateMovie.setString(5, thumbnail);
+                updateMovie.setString(6, movieId);
+
+                records = updateMovie.executeUpdate();
+            }
             if (records > 0) {
                 movieResponse = new MovieResponse(true, "");
             } else {
-                movieResponse = new MovieResponse(false, "Couldn't find movie.");
-
+                movieResponse = new MovieResponse(false, error);
             }
         }catch (Exception e) {
             e.printStackTrace();

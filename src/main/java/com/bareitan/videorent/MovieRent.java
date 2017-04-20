@@ -19,6 +19,7 @@ public class MovieRent extends Application{
         h.add(Movies.class);
         h.add(Rent.class);
         h.add(Categories.class);
+        h.add(Comments.class);
         return h;
     }
 }

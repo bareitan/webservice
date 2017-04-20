@@ -4,10 +4,7 @@ import com.google.gson.Gson;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.json.simple.JSONObject;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 import java.sql.*;
@@ -189,7 +186,7 @@ public class Rent {
     }
 
     @GET
-    @Path("/usermovierent")
+    @Path("/userMovieRent")
     @Produces(MediaType.APPLICATION_JSON)
     public String userMovieRent(
             @QueryParam("movieID") Integer movieId,
@@ -232,9 +229,9 @@ public class Rent {
 
 
     @GET
-    @Path("/userRents")
+    @Path("/userRents/{userID}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String userRents(@QueryParam("userID") Integer userId)
+    public String userRents(@PathParam("userID") Integer userID)
     {
         Connection connection;
         PreparedStatement selectRent;
@@ -249,7 +246,7 @@ public class Rent {
                     "SELECT * FROM rents NATURAL JOIN users NATURAL JOIN movies " +
                     "WHERE userID=?" +
                     "ORDER BY RentDate");
-            selectRent.setString(1, userId.toString());
+            selectRent.setString(1, userID.toString());
             rs = selectRent.executeQuery();
             RentItem item;
             while (rs.next()) {

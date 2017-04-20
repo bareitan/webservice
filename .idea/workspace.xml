@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17f15288-018a-4e5b-8f78-ba48ccaceafb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/History.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_external_glassfish_jaxb_10_0_b28.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Comments.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/History.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/rentmoviews/WEB-INF/classes/com/bareitan/videorent/Movie.class" afterPath="$PROJECT_DIR$/out/artifacts/rentmoviews/WEB-INF/classes/com/bareitan/videorent/Movie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/rentmoviews/WEB-INF/classes/com/bareitan/videorent/MovieRent.class" afterPath="$PROJECT_DIR$/out/artifacts/rentmoviews/WEB-INF/classes/com/bareitan/videorent/MovieRent.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/rentmoviews/WEB-INF/classes/com/bareitan/videorent/Movies.class" afterPath="$PROJECT_DIR$/out/artifacts/rentmoviews/WEB-INF/classes/com/bareitan/videorent/Movies.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bareitan/videorent/Movie.class" afterPath="$PROJECT_DIR$/target/classes/com/bareitan/videorent/Movie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bareitan/videorent/MovieRent.class" afterPath="$PROJECT_DIR$/target/classes/com/bareitan/videorent/MovieRent.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bareitan/videorent/Movies.class" afterPath="$PROJECT_DIR$/target/classes/com/bareitan/videorent/Movies.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/62697223-3006-4db1-8db5-321f4e73faf8.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/62697223-3006-4db1-8db5-321f4e73faf8.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Categories.java" afterPath="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Categories.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/MovieRent.java" afterPath="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/MovieRent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Movies.java" afterPath="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Movies.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Rent.java" afterPath="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Rent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webservice.iml" afterPath="$PROJECT_DIR$/webservice.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,10 +84,6 @@
         <option name="myItemId" value="video_db" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="rents" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -91,39 +99,7 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="movies" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="video_db@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="video_db" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="video_db@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="video_db" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="categories" />
+        <option name="myItemId" value="comments" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -134,43 +110,70 @@
       <file leaf-file-name="Movies.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Movies.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+            <state relative-caret-position="-2754">
+              <caret line="108" column="35" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="108" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1950#1957#0" expanded="true" />
-                <marker date="1492533460813" expanded="true" signature="713:734" ph="SELECT * FRO... movies" />
-                <marker date="1492533460813" expanded="true" signature="713:800" ph="SELECT * FRO... movies" />
-                <marker date="1492533460813" expanded="true" signature="2064:2169" ph="SELECT * FRO... movies" />
-                <marker date="1492533460813" expanded="true" signature="2507:2508" ph="SELECT * FRO... movies" />
-                <marker date="1492533460813" expanded="true" signature="4221:4280" ph="SELECT Categ... categories" />
-                <marker date="1492533460813" expanded="true" signature="4639:4722" ph="INSERT INTO categories... " />
-                <marker date="1492533460813" expanded="true" signature="5189:5257" ph="INSERT INTO movies... " />
-                <marker date="1492533460813" expanded="true" signature="5189:5300" ph="INSERT INTO movies... " />
-                <marker date="1492533460813" expanded="true" signature="6710:6835" ph="UPDATE movie... " />
-                <marker date="1492533460813" expanded="true" signature="8034:8068" ph="DELETE FROM " />
-                <marker date="1492533460813" expanded="true" signature="8046:8052" ph="INSERT INTO movies... " />
+                <element signature="e#1949#1956#0" expanded="true" />
+                <marker date="1492636338206" expanded="true" signature="713:734" ph="SELECT * FRO... movies" />
+                <marker date="1492636338206" expanded="true" signature="713:800" ph="SELECT * FRO... movies" />
+                <marker date="1492636338206" expanded="true" signature="2090:2195" ph="SELECT * FRO... movies" />
+                <marker date="1492636338206" expanded="true" signature="2533:2534" ph="SELECT * FRO... movies" />
+                <marker date="1492636338206" expanded="true" signature="4208:4267" ph="SELECT Categ... categories" />
+                <marker date="1492636338206" expanded="true" signature="4626:4709" ph="INSERT INTO categories... " />
+                <marker date="1492636338206" expanded="true" signature="5176:5244" ph="INSERT INTO movies... " />
+                <marker date="1492636338206" expanded="true" signature="5176:5287" ph="INSERT INTO movies... " />
+                <marker date="1492636338206" expanded="true" signature="6929:6988" ph="SELECT Categ... categories" />
+                <marker date="1492636338206" expanded="true" signature="7347:7430" ph="INSERT INTO categories... " />
+                <marker date="1492636338206" expanded="true" signature="7875:7965" ph="SELECT (SELE... " />
+                <marker date="1492636338206" expanded="true" signature="7900:7965" ph="SELECT COUNT... rents" />
+                <marker date="1492636338206" expanded="true" signature="8591:8720" ph="UPDATE movie... " />
+                <marker date="1492636338206" expanded="true" signature="9938:9972" ph="DELETE FROM " />
+                <marker date="1492636338206" expanded="true" signature="9950:9956" ph="INSERT INTO movies... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="History.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/History.java">
+      <file leaf-file-name="Register.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Register.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="879">
+              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="82" selection-end-column="5" />
+              <folding>
+                <marker date="1490956732109" expanded="true" signature="1239:1299" ph="INSERT into users... " />
+                <marker date="1490956732109" expanded="true" signature="1239:1355" ph="INSERT INTO users... " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/62697223-3006-4db1-8db5-321f4e73faf8/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="20" />
+      <file leaf-file-name="video_db.movies" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.movies">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="video_db.users" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.users">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -178,124 +181,72 @@
       <file leaf-file-name="Rent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Rent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
-              <caret line="95" column="46" lean-forward="false" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
+            <state relative-caret-position="306">
+              <caret line="163" column="31" lean-forward="false" selection-start-line="162" selection-start-column="6" selection-end-line="174" selection-end-column="13" />
               <folding>
-                <element signature="e#460#464#0" expanded="false" />
-                <element signature="e#4057#4061#0" expanded="false" />
-                <element signature="method#userRents#0;class#Rent#0" expanded="false" />
-                <element signature="e#9678#9679#0" expanded="false" />
-                <element signature="e#9716#9717#0" expanded="false" />
-                <element signature="e#9763#9764#0" expanded="false" />
-                <element signature="e#9809#9810#0" expanded="false" />
-                <element signature="e#9849#9850#0" expanded="false" />
-                <element signature="e#9889#9890#0" expanded="false" />
-                <element signature="e#9943#9944#0" expanded="false" />
-                <element signature="e#9993#9994#0" expanded="false" />
-                <element signature="e#10029#10030#0" expanded="false" />
-                <element signature="e#10066#10067#0" expanded="false" />
-                <element signature="e#10111#10112#0" expanded="false" />
-                <element signature="e#10155#10156#0" expanded="false" />
-                <element signature="e#10189#10190#0" expanded="false" />
-                <element signature="e#10226#10227#0" expanded="false" />
-                <element signature="e#10271#10272#0" expanded="false" />
-                <element signature="e#10315#10316#0" expanded="false" />
-                <element signature="e#10355#10356#0" expanded="false" />
-                <element signature="e#10395#10396#0" expanded="false" />
-                <element signature="e#10449#10450#0" expanded="false" />
-                <element signature="e#10499#10500#0" expanded="false" />
-                <element signature="e#10536#10537#0" expanded="false" />
-                <element signature="e#10575#10576#0" expanded="false" />
-                <element signature="e#10625#10626#0" expanded="false" />
-                <element signature="e#10673#10674#0" expanded="false" />
-                <element signature="e#10712#10713#0" expanded="false" />
-                <element signature="e#10753#10754#0" expanded="false" />
-                <element signature="e#10807#10808#0" expanded="false" />
-                <element signature="e#10859#10860#0" expanded="false" />
-                <marker date="1491418339278" expanded="true" signature="1091:1304" ph="SELECT (SELE... " />
-                <marker date="1491418339278" expanded="true" signature="1151:1191" ph="SELECT Stock... movies" />
-                <marker date="1491418339278" expanded="true" signature="1223:1289" ph="SELECT COUNT... rents" />
-                <marker date="1491418339278" expanded="true" signature="1853:1932" ph="SELECT * FRO... rents" />
-                <marker date="1491418339278" expanded="true" signature="1853:1968" ph="SELECT count... rents" />
-                <marker date="1491418339278" expanded="true" signature="2472:2579" ph="INSERT INTO rents... " />
-                <marker date="1491418339278" expanded="true" signature="4494:4542" ph="UPDATE rents... " />
-                <marker date="1491418339278" expanded="true" signature="5571:5784" ph="SELECT (SELE... " />
-                <marker date="1491418339278" expanded="true" signature="5631:5671" ph="SELECT Stock... movies" />
-                <marker date="1491418339278" expanded="true" signature="5703:5769" ph="SELECT COUNT... rents" />
-                <marker date="1491418339278" expanded="true" signature="7001:7079" ph="SELECT count... movies" />
-                <marker date="1491418339278" expanded="true" signature="7001:7102" ph="SELECT RentI... rents" />
-                <marker date="1491418339278" expanded="true" signature="8255:8280" ph="SELECT (SELE... " />
-                <marker date="1491418339278" expanded="true" signature="8255:8300" ph="SELECT * FRO... rents" />
-                <marker date="1491418339278" expanded="true" signature="8255:8338" ph="SELECT * FRO... rents" />
-                <marker date="1491418339278" expanded="true" signature="8255:8378" ph="SELECT * FRO... rents" />
-                <marker date="1491418339278" expanded="true" signature="8255:8420" ph="SELECT * FRO... rents" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#373#377#0" expanded="false" />
+                <element signature="method#takeMovie#0;class#Rent#0" expanded="false" />
+                <element signature="e#3970#3974#0" expanded="false" />
+                <element signature="method#returnMovie#0;class#Rent#0" expanded="false" />
+                <marker date="1492551492395" expanded="true" signature="1004:1217" ph="SELECT (SELE... " />
+                <marker date="1492551492395" expanded="true" signature="1064:1104" ph="SELECT Stock... movies" />
+                <marker date="1492551492395" expanded="true" signature="1136:1202" ph="SELECT COUNT... rents" />
+                <marker date="1492551492395" expanded="true" signature="1766:1845" ph="SELECT * FRO... rents" />
+                <marker date="1492551492395" expanded="true" signature="1766:1881" ph="SELECT count... rents" />
+                <marker date="1492551492395" expanded="true" signature="2385:2492" ph="INSERT INTO rents... " />
+                <marker date="1492551492395" expanded="true" signature="4407:4455" ph="UPDATE rents... " />
+                <marker date="1492551492395" expanded="true" signature="5484:5697" ph="SELECT (SELE... " />
+                <marker date="1492551492395" expanded="true" signature="5544:5584" ph="SELECT Stock... movies" />
+                <marker date="1492551492395" expanded="true" signature="5616:5682" ph="SELECT COUNT... rents" />
+                <marker date="1492551492395" expanded="true" signature="6914:6992" ph="SELECT count... movies" />
+                <marker date="1492551492395" expanded="true" signature="6914:7015" ph="SELECT RentI... rents" />
+                <marker date="1492551492395" expanded="true" signature="8176:8201" ph="SELECT (SELE... " />
+                <marker date="1492551492395" expanded="true" signature="8176:8221" ph="SELECT * FRO... rents" />
+                <marker date="1492551492395" expanded="true" signature="8176:8259" ph="SELECT * FRO... rents" />
+                <marker date="1492551492395" expanded="true" signature="8176:8299" ph="SELECT * FRO... rents" />
+                <marker date="1492551492395" expanded="true" signature="8176:8341" ph="SELECT * FRO... rents" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video_db.categories" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.categories">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="video_db.movies" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.movies">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="video_db.rents" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.rents">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Categories.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Categories.java">
+      <file leaf-file-name="MovieRent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/MovieRent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="111" column="13" lean-forward="false" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="video_db.comments" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.comments">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Comments.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Comments.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="794">
+              <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1492464867464" expanded="true" signature="941:955" ph="SELECT * FRO... movies" />
-                <marker date="1492464867464" expanded="true" signature="941:965" ph="SELECT * FRO... categories" />
-                <marker date="1492464867464" expanded="true" signature="2143:2222" ph="INSERT INTO movies... " />
-                <marker date="1492464867464" expanded="true" signature="3540:3576" ph="UPDATE categ... " />
-                <marker date="1492464867464" expanded="true" signature="3540:3582" ph="UPDATE categ... " />
-                <marker date="1492464867464" expanded="true" signature="3540:3595" ph="UPDATE categ... " />
-                <marker date="1492464867464" expanded="true" signature="4656:4697" ph="DELETE FROM " />
-                <marker date="1492464867464" expanded="true" signature="4667:4697" ph="UPDATE categ... " />
-                <marker date="1492464867464" expanded="true" signature="5740:5793" ph="SELECT Categ... categories" />
-                <marker date="1492464867464" expanded="true" signature="5740:5799" ph="SELECT Categ... categories" />
+                <element signature="e#844#853#0" expanded="true" />
+                <marker date="1492645807473" expanded="true" signature="987:1046" ph="SELECT * FRO... movies" />
+                <marker date="1492645807473" expanded="true" signature="987:1139" ph="SELECT * FRO... comments" />
+                <marker date="1492645807473" expanded="true" signature="2703:2812" ph="INSERT INTO COMMENTS... " />
               </folding>
             </state>
           </provider>
@@ -313,6 +264,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>added</find>
+      <find>error</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -342,13 +294,16 @@
         <option value="$PROJECT_DIR$/src/main/java/Movies.java" />
         <option value="$PROJECT_DIR$/procfile" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Login.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Rent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/MovieRent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Categories.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/62697223-3006-4db1-8db5-321f4e73faf8/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/History.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Rent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Movies.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/MovieRent.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Comments.java" />
       </list>
     </option>
   </component>
@@ -387,6 +342,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -406,6 +363,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -467,11 +456,99 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="videorent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Register.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="videorent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Movies.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="videorent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Categories.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1009,7 +1086,8 @@
       <workItem from="1490971806382" duration="11282000" />
       <workItem from="1491241195271" duration="45884000" />
       <workItem from="1492447144945" duration="11874000" />
-      <workItem from="1492527468936" duration="6385000" />
+      <workItem from="1492527468936" duration="15293000" />
+      <workItem from="1492620623214" duration="15600000" />
     </task>
     <task id="LOCAL-00001" summary="Deploy">
       <created>1490967867729</created>
@@ -1123,11 +1201,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491426303509</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Before history">
+      <created>1492545569448</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1492545569448</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102422000" />
+    <option name="totallyTimeSpent" value="126930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1145,7 +1230,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Azure Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40268457" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38542664" sideWeight="0.5565032" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1156,19 +1241,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30488974" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30488974" sideWeight="0.45095947" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38542664" sideWeight="0.48720682" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38542664" sideWeight="0.4434968" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="HDInsight Spark Submission" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279003" sideWeight="0.48720682" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279003" sideWeight="0.48720682" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27238807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2750533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1179,6 +1263,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="976" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32598275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1191,19 +1276,32 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deploy" />
     <MESSAGE value="Before Italy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before Italy" />
+    <MESSAGE value="Before history" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before history" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Movies.java</url>
-          <line>194</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Rent.java</url>
+          <line>24</line>
           <properties />
-          <option name="timeStamp" value="29" />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Rent.java</url>
+          <line>150</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Rent.java</url>
+          <line>236</line>
+          <properties />
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1212,22 +1310,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/MovieRent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
@@ -1243,7 +1325,6 @@
         <state relative-caret-position="629">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="51" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1490956732109" expanded="true" signature="1239:1299" ph="INSERT into users... " />
             <marker date="1490956732109" expanded="true" signature="1239:1355" ph="INSERT INTO users... " />
           </folding>
@@ -1256,18 +1337,22 @@
           <caret line="86" column="16" lean-forward="true" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1950#1957#0" expanded="true" />
-            <marker date="1492533460813" expanded="true" signature="713:734" ph="SELECT * FRO... movies" />
-            <marker date="1492533460813" expanded="true" signature="713:800" ph="SELECT * FRO... movies" />
-            <marker date="1492533460813" expanded="true" signature="2064:2169" ph="SELECT * FRO... movies" />
-            <marker date="1492533460813" expanded="true" signature="2507:2508" ph="SELECT * FRO... movies" />
-            <marker date="1492533460813" expanded="true" signature="4221:4280" ph="SELECT Categ... categories" />
-            <marker date="1492533460813" expanded="true" signature="4639:4722" ph="INSERT INTO categories... " />
-            <marker date="1492533460813" expanded="true" signature="5189:5257" ph="INSERT INTO movies... " />
-            <marker date="1492533460813" expanded="true" signature="5189:5300" ph="INSERT INTO movies... " />
-            <marker date="1492533460813" expanded="true" signature="6710:6835" ph="UPDATE movie... " />
-            <marker date="1492533460813" expanded="true" signature="8034:8068" ph="DELETE FROM " />
-            <marker date="1492533460813" expanded="true" signature="8046:8052" ph="INSERT INTO movies... " />
+            <element signature="e#1949#1956#0" expanded="true" />
+            <marker date="1492636338206" expanded="true" signature="713:734" ph="SELECT * FRO... movies" />
+            <marker date="1492636338206" expanded="true" signature="713:800" ph="SELECT * FRO... movies" />
+            <marker date="1492636338206" expanded="true" signature="2090:2195" ph="SELECT * FRO... movies" />
+            <marker date="1492636338206" expanded="true" signature="2533:2534" ph="SELECT * FRO... movies" />
+            <marker date="1492636338206" expanded="true" signature="4208:4267" ph="SELECT Categ... categories" />
+            <marker date="1492636338206" expanded="true" signature="4626:4709" ph="INSERT INTO categories... " />
+            <marker date="1492636338206" expanded="true" signature="5176:5244" ph="INSERT INTO movies... " />
+            <marker date="1492636338206" expanded="true" signature="5176:5287" ph="INSERT INTO movies... " />
+            <marker date="1492636338206" expanded="true" signature="6929:6988" ph="SELECT Categ... categories" />
+            <marker date="1492636338206" expanded="true" signature="7347:7430" ph="INSERT INTO categories... " />
+            <marker date="1492636338206" expanded="true" signature="7875:7965" ph="SELECT (SELE... " />
+            <marker date="1492636338206" expanded="true" signature="7900:7965" ph="SELECT COUNT... rents" />
+            <marker date="1492636338206" expanded="true" signature="8591:8720" ph="UPDATE movie... " />
+            <marker date="1492636338206" expanded="true" signature="9938:9972" ph="DELETE FROM " />
+            <marker date="1492636338206" expanded="true" signature="9950:9956" ph="INSERT INTO movies... " />
           </folding>
         </state>
       </provider>
@@ -1281,28 +1366,27 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.movies">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1325,14 +1409,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1369,7 +1453,6 @@
         <state relative-caret-position="1207">
           <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1490956732109" expanded="true" signature="1239:1299" ph="INSERT into users... " />
             <marker date="1490956732109" expanded="true" signature="1239:1355" ph="INSERT INTO users... " />
           </folding>
@@ -1409,7 +1492,6 @@
         <state relative-caret-position="918">
           <caret line="54" column="72" lean-forward="false" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1490956732109" expanded="true" signature="1239:1299" ph="INSERT into users... " />
             <marker date="1490956732109" expanded="true" signature="1239:1355" ph="INSERT INTO users... " />
           </folding>
@@ -1463,13 +1545,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Utitlity.java" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/com/bareitan/videorent/LoginResponse.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1496,18 +1571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="51" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1490956732109" expanded="true" signature="1239:1299" ph="INSERT into users... " />
-            <marker date="1490956732109" expanded="true" signature="1239:1355" ph="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/artifacts/webservice_war_exploded.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1530,165 +1593,38 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.history">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="67" column="98" lean-forward="false" selection-start-line="67" selection-start-column="98" selection-end-line="67" selection-end-column="98" />
-          <folding>
-            <marker date="1491409035534" expanded="true" signature="1221:1273" ph="SELECT * FRO... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/MovieRent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Rent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="95" column="46" lean-forward="false" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
-          <folding>
-            <element signature="e#460#464#0" expanded="false" />
-            <element signature="e#4057#4061#0" expanded="false" />
-            <element signature="method#userRents#0;class#Rent#0" expanded="false" />
-            <element signature="e#9678#9679#0" expanded="false" />
-            <element signature="e#9716#9717#0" expanded="false" />
-            <element signature="e#9763#9764#0" expanded="false" />
-            <element signature="e#9809#9810#0" expanded="false" />
-            <element signature="e#9849#9850#0" expanded="false" />
-            <element signature="e#9889#9890#0" expanded="false" />
-            <element signature="e#9943#9944#0" expanded="false" />
-            <element signature="e#9993#9994#0" expanded="false" />
-            <element signature="e#10029#10030#0" expanded="false" />
-            <element signature="e#10066#10067#0" expanded="false" />
-            <element signature="e#10111#10112#0" expanded="false" />
-            <element signature="e#10155#10156#0" expanded="false" />
-            <element signature="e#10189#10190#0" expanded="false" />
-            <element signature="e#10226#10227#0" expanded="false" />
-            <element signature="e#10271#10272#0" expanded="false" />
-            <element signature="e#10315#10316#0" expanded="false" />
-            <element signature="e#10355#10356#0" expanded="false" />
-            <element signature="e#10395#10396#0" expanded="false" />
-            <element signature="e#10449#10450#0" expanded="false" />
-            <element signature="e#10499#10500#0" expanded="false" />
-            <element signature="e#10536#10537#0" expanded="false" />
-            <element signature="e#10575#10576#0" expanded="false" />
-            <element signature="e#10625#10626#0" expanded="false" />
-            <element signature="e#10673#10674#0" expanded="false" />
-            <element signature="e#10712#10713#0" expanded="false" />
-            <element signature="e#10753#10754#0" expanded="false" />
-            <element signature="e#10807#10808#0" expanded="false" />
-            <element signature="e#10859#10860#0" expanded="false" />
-            <marker date="1491418339278" expanded="true" signature="1091:1304" ph="SELECT (SELE... " />
-            <marker date="1491418339278" expanded="true" signature="1151:1191" ph="SELECT Stock... movies" />
-            <marker date="1491418339278" expanded="true" signature="1223:1289" ph="SELECT COUNT... rents" />
-            <marker date="1491418339278" expanded="true" signature="1853:1932" ph="SELECT * FRO... rents" />
-            <marker date="1491418339278" expanded="true" signature="1853:1968" ph="SELECT count... rents" />
-            <marker date="1491418339278" expanded="true" signature="2472:2579" ph="INSERT INTO rents... " />
-            <marker date="1491418339278" expanded="true" signature="4494:4542" ph="UPDATE rents... " />
-            <marker date="1491418339278" expanded="true" signature="5571:5784" ph="SELECT (SELE... " />
-            <marker date="1491418339278" expanded="true" signature="5631:5671" ph="SELECT Stock... movies" />
-            <marker date="1491418339278" expanded="true" signature="5703:5769" ph="SELECT COUNT... rents" />
-            <marker date="1491418339278" expanded="true" signature="7001:7079" ph="SELECT count... movies" />
-            <marker date="1491418339278" expanded="true" signature="7001:7102" ph="SELECT RentI... rents" />
-            <marker date="1491418339278" expanded="true" signature="8255:8280" ph="SELECT (SELE... " />
-            <marker date="1491418339278" expanded="true" signature="8255:8300" ph="SELECT * FRO... rents" />
-            <marker date="1491418339278" expanded="true" signature="8255:8338" ph="SELECT * FRO... rents" />
-            <marker date="1491418339278" expanded="true" signature="8255:8378" ph="SELECT * FRO... rents" />
-            <marker date="1491418339278" expanded="true" signature="8255:8420" ph="SELECT * FRO... rents" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.rents">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.movies">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/62697223-3006-4db1-8db5-321f4e73faf8/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/History.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Categories.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="111" column="13" lean-forward="false" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
+        <state relative-caret-position="284">
+          <caret line="204" column="6" lean-forward="false" selection-start-line="204" selection-start-column="6" selection-end-line="204" selection-end-column="6" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#6631#6632#0" expanded="false" />
+            <element signature="e#6666#6667#0" expanded="false" />
             <marker date="1492464867464" expanded="true" signature="941:955" ph="SELECT * FRO... movies" />
             <marker date="1492464867464" expanded="true" signature="941:965" ph="SELECT * FRO... categories" />
             <marker date="1492464867464" expanded="true" signature="2143:2222" ph="INSERT INTO movies... " />
@@ -1703,33 +1639,177 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Movies.java">
+    <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.categories">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/62697223-3006-4db1-8db5-321f4e73faf8/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+        <state relative-caret-position="17">
+          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1950#1957#0" expanded="true" />
-            <marker date="1492533460813" expanded="true" signature="713:734" ph="SELECT * FRO... movies" />
-            <marker date="1492533460813" expanded="true" signature="713:800" ph="SELECT * FRO... movies" />
-            <marker date="1492533460813" expanded="true" signature="2064:2169" ph="SELECT * FRO... movies" />
-            <marker date="1492533460813" expanded="true" signature="2507:2508" ph="SELECT * FRO... movies" />
-            <marker date="1492533460813" expanded="true" signature="4221:4280" ph="SELECT Categ... categories" />
-            <marker date="1492533460813" expanded="true" signature="4639:4722" ph="INSERT INTO categories... " />
-            <marker date="1492533460813" expanded="true" signature="5189:5257" ph="INSERT INTO movies... " />
-            <marker date="1492533460813" expanded="true" signature="5189:5300" ph="INSERT INTO movies... " />
-            <marker date="1492533460813" expanded="true" signature="6710:6835" ph="UPDATE movie... " />
-            <marker date="1492533460813" expanded="true" signature="8034:8068" ph="DELETE FROM " />
-            <marker date="1492533460813" expanded="true" signature="8046:8052" ph="INSERT INTO movies... " />
+            <marker date="1491409035534" expanded="true" signature="1221:1273" ph="SELECT * FRO... user" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/History.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Rent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="163" column="31" lean-forward="false" selection-start-line="162" selection-start-column="6" selection-end-line="174" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#373#377#0" expanded="false" />
+            <element signature="method#takeMovie#0;class#Rent#0" expanded="false" />
+            <element signature="e#3970#3974#0" expanded="false" />
+            <element signature="method#returnMovie#0;class#Rent#0" expanded="false" />
+            <marker date="1492551492395" expanded="true" signature="1004:1217" ph="SELECT (SELE... " />
+            <marker date="1492551492395" expanded="true" signature="1064:1104" ph="SELECT Stock... movies" />
+            <marker date="1492551492395" expanded="true" signature="1136:1202" ph="SELECT COUNT... rents" />
+            <marker date="1492551492395" expanded="true" signature="1766:1845" ph="SELECT * FRO... rents" />
+            <marker date="1492551492395" expanded="true" signature="1766:1881" ph="SELECT count... rents" />
+            <marker date="1492551492395" expanded="true" signature="2385:2492" ph="INSERT INTO rents... " />
+            <marker date="1492551492395" expanded="true" signature="4407:4455" ph="UPDATE rents... " />
+            <marker date="1492551492395" expanded="true" signature="5484:5697" ph="SELECT (SELE... " />
+            <marker date="1492551492395" expanded="true" signature="5544:5584" ph="SELECT Stock... movies" />
+            <marker date="1492551492395" expanded="true" signature="5616:5682" ph="SELECT COUNT... rents" />
+            <marker date="1492551492395" expanded="true" signature="6914:6992" ph="SELECT count... movies" />
+            <marker date="1492551492395" expanded="true" signature="6914:7015" ph="SELECT RentI... rents" />
+            <marker date="1492551492395" expanded="true" signature="8176:8201" ph="SELECT (SELE... " />
+            <marker date="1492551492395" expanded="true" signature="8176:8221" ph="SELECT * FRO... rents" />
+            <marker date="1492551492395" expanded="true" signature="8176:8259" ph="SELECT * FRO... rents" />
+            <marker date="1492551492395" expanded="true" signature="8176:8299" ph="SELECT * FRO... rents" />
+            <marker date="1492551492395" expanded="true" signature="8176:8341" ph="SELECT * FRO... rents" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="879">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="82" selection-end-column="5" />
+          <folding>
+            <marker date="1490956732109" expanded="true" signature="1239:1299" ph="INSERT into users... " />
+            <marker date="1490956732109" expanded="true" signature="1239:1355" ph="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.movies">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/MovieRent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Movies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2754">
+          <caret line="108" column="35" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="108" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1949#1956#0" expanded="true" />
+            <marker date="1492636338206" expanded="true" signature="713:734" ph="SELECT * FRO... movies" />
+            <marker date="1492636338206" expanded="true" signature="713:800" ph="SELECT * FRO... movies" />
+            <marker date="1492636338206" expanded="true" signature="2090:2195" ph="SELECT * FRO... movies" />
+            <marker date="1492636338206" expanded="true" signature="2533:2534" ph="SELECT * FRO... movies" />
+            <marker date="1492636338206" expanded="true" signature="4208:4267" ph="SELECT Categ... categories" />
+            <marker date="1492636338206" expanded="true" signature="4626:4709" ph="INSERT INTO categories... " />
+            <marker date="1492636338206" expanded="true" signature="5176:5244" ph="INSERT INTO movies... " />
+            <marker date="1492636338206" expanded="true" signature="5176:5287" ph="INSERT INTO movies... " />
+            <marker date="1492636338206" expanded="true" signature="6929:6988" ph="SELECT Categ... categories" />
+            <marker date="1492636338206" expanded="true" signature="7347:7430" ph="INSERT INTO categories... " />
+            <marker date="1492636338206" expanded="true" signature="7875:7965" ph="SELECT (SELE... " />
+            <marker date="1492636338206" expanded="true" signature="7900:7965" ph="SELECT COUNT... rents" />
+            <marker date="1492636338206" expanded="true" signature="8591:8720" ph="UPDATE movie... " />
+            <marker date="1492636338206" expanded="true" signature="9938:9972" ph="DELETE FROM " />
+            <marker date="1492636338206" expanded="true" signature="9950:9956" ph="INSERT INTO movies... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bareitan/videorent/Comments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#844#853#0" expanded="true" />
+            <marker date="1492645807473" expanded="true" signature="987:1046" ph="SELECT * FRO... movies" />
+            <marker date="1492645807473" expanded="true" signature="987:1139" ph="SELECT * FRO... comments" />
+            <marker date="1492645807473" expanded="true" signature="2703:2812" ph="INSERT INTO COMMENTS... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d0561ea0/62697223-3006-4db1-8db5-321f4e73faf8/video_db.comments">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

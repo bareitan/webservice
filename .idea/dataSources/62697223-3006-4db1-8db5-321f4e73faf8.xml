@@ -119,61 +119,68 @@
     <index id="35" parent="11" name="movies_ibfk_1">
       <ColNames>CategoryID</ColNames>
     </index>
-    <key id="36" parent="11" name="PRIMARY">
+    <index id="36" parent="11" name="movies_MovieName_uindex">
+      <ColNames>MovieName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>MovieID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="37" parent="11" name="movies_ibfk_1">
+    <key id="38" parent="11" name="movies_MovieName_uindex">
+      <ColNames>MovieName</ColNames>
+      <UnderlyingIndexName>movies_MovieName_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="39" parent="11" name="movies_ibfk_1">
       <ColNames>CategoryID</ColNames>
       <RefSchemaName>video_db</RefSchemaName>
       <RefTableName>categories</RefTableName>
       <RefColNames>CategoryID</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="38" parent="12" name="UserID">
+    <column id="40" parent="12" name="UserID">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="39" parent="12" name="MovieID">
+    <column id="41" parent="12" name="MovieID">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="12" name="RentDate">
+    <column id="42" parent="12" name="RentDate">
       <Position>4</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="41" parent="12" name="ReturnDate">
+    <column id="43" parent="12" name="ReturnDate">
       <Position>5</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="42" parent="12" name="RentID">
+    <column id="44" parent="12" name="RentID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <index id="43" parent="12" name="UserID">
+    <index id="45" parent="12" name="UserID">
       <ColNames>UserID</ColNames>
     </index>
-    <index id="44" parent="12" name="rents_ibfk_2">
+    <index id="46" parent="12" name="rents_ibfk_2">
       <ColNames>MovieID</ColNames>
     </index>
-    <key id="45" parent="12" name="PRIMARY">
+    <key id="47" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>RentID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="46" parent="12" name="rents_ibfk_1">
+    <foreign-key id="48" parent="12" name="rents_ibfk_1">
       <ColNames>UserID</ColNames>
       <RefSchemaName>video_db</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>UserID</RefColNames>
     </foreign-key>
-    <foreign-key id="47" parent="12" name="rents_ibfk_2">
+    <foreign-key id="49" parent="12" name="rents_ibfk_2">
       <ColNames>MovieID</ColNames>
       <RefSchemaName>video_db</RefSchemaName>
       <RefTableName>movies</RefTableName>
@@ -181,50 +188,50 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="48" parent="13" name="UserID">
+    <column id="50" parent="13" name="UserID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="49" parent="13" name="FirstName">
+    <column id="51" parent="13" name="FirstName">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="50" parent="13" name="LastName">
+    <column id="52" parent="13" name="LastName">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="51" parent="13" name="Email">
+    <column id="53" parent="13" name="Email">
       <Position>4</Position>
       <DataType>varchar(60)|0</DataType>
     </column>
-    <column id="52" parent="13" name="Password">
+    <column id="54" parent="13" name="Password">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="53" parent="13" name="IsAdmin">
+    <column id="55" parent="13" name="IsAdmin">
       <Position>6</Position>
       <DataType>tinyint(4)|0</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="54" parent="13" name="DateAdded">
+    <column id="56" parent="13" name="DateAdded">
       <Position>7</Position>
       <DataType>datetime|0</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <index id="55" parent="13" name="users_Email_uindex">
+    <index id="57" parent="13" name="users_Email_uindex">
       <ColNames>Email</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="56" parent="13" name="PRIMARY">
+    <key id="58" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>UserID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="57" parent="13" name="users_Email_uindex">
+    <key id="59" parent="13" name="users_Email_uindex">
       <ColNames>Email</ColNames>
       <UnderlyingIndexName>users_Email_uindex</UnderlyingIndexName>
     </key>
