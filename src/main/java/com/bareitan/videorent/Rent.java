@@ -1,7 +1,6 @@
 package com.bareitan.videorent;
 
 import com.google.gson.Gson;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.json.simple.JSONObject;
 
 import javax.ws.rs.*;
@@ -150,9 +149,9 @@ public class Rent {
     @Path("/checkStock")
     @Produces(MediaType.APPLICATION_JSON)
     public String takeMovie(
-            @QueryParam("movieID") Integer movieId) {
+            @QueryParam("movieID") Integer movieId) throws SQLException {
 
-        Connection connection;
+        Connection connection = null;
         PreparedStatement stockSelect;
         String error = "";
         ResultSet rs;
@@ -177,6 +176,10 @@ public class Rent {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
         JSONObject response = new JSONObject();
         response.put("movieID", movieId);
@@ -190,9 +193,9 @@ public class Rent {
     @Produces(MediaType.APPLICATION_JSON)
     public String userMovieRent(
             @QueryParam("movieID") Integer movieId,
-            @QueryParam("userID") Integer userID) {
+            @QueryParam("userID") Integer userID) throws SQLException {
 
-        Connection connection;
+        Connection connection = null;
         PreparedStatement rentedSelect;
         String error = "";
         ResultSet rs;
@@ -217,6 +220,10 @@ public class Rent {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
         JSONObject response = new JSONObject();
         response.put("isRented", isRented);
@@ -231,9 +238,8 @@ public class Rent {
     @GET
     @Path("/userRents/{userID}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String userRents(@PathParam("userID") Integer userID)
-    {
-        Connection connection;
+    public String userRents(@PathParam("userID") Integer userID) throws SQLException {
+        Connection connection = null;
         PreparedStatement selectRent;
         String error="";
         ResultSet rs;
@@ -264,6 +270,10 @@ public class Rent {
 
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
         if (rentItems.size() > 0) {
             HashMap hm = new HashMap();

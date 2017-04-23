@@ -24,7 +24,7 @@ public class Login {
     // Produces JSON as response
     @Produces(MediaType.APPLICATION_JSON)
     // Query parameters are parameters: http://localhost/<appln-folder-name>/login/dologin?username=abc&password=xyz
-    public String doLogin(@QueryParam("email") String email, @QueryParam("password") String password) {
+    public String doLogin(@QueryParam("email") String email, @QueryParam("password") String password) throws SQLException {
         Gson gson = new Gson();
         Connection connection = null;
         PreparedStatement userLookup = null;
@@ -57,11 +57,7 @@ public class Login {
                 loginResponse = new LoginResponse(false, false, e.toString(),userId);
             } finally {
                 if (connection != null) {
-                    try {
-                        connection.close();
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
+                    connection.close();
                 }
             }
         }else {

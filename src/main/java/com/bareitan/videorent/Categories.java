@@ -11,10 +11,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.json.simple.JSONObject;
@@ -30,9 +27,9 @@ public class Categories {
     @GET
     @Path("/getAllCategories")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getAllCategories() {
+    public String getAllCategories() throws SQLException {
         Gson gson = new Gson();
-        Connection connection;
+        Connection connection = null;
         PreparedStatement getAllStatement;
 
         ArrayList<Category> categories = new ArrayList<Category>();
@@ -57,6 +54,10 @@ public class Categories {
             JSONObject response = new JSONObject();
             response.put("error", e.getLocalizedMessage());
             return response.toJSONString();
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
 
     }
@@ -65,9 +66,8 @@ public class Categories {
     @GET
     @Path("/addCategory")
     @Produces(MediaType.APPLICATION_JSON)
-    public String addCategory(@QueryParam("categoryName") String categoryName)
-    {
-        Connection connection;
+    public String addCategory(@QueryParam("categoryName") String categoryName) throws SQLException {
+        Connection connection = null;
         Boolean added = false;
         String error = "";
         PreparedStatement insertCategory;
@@ -91,6 +91,10 @@ public class Categories {
         }catch (Exception e) {
             e.printStackTrace();
             error = e.getLocalizedMessage();
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
         JSONObject response = new JSONObject();
         response.put("added", added);
@@ -103,9 +107,8 @@ public class Categories {
     @Path("/updateCategory")
     @Produces(MediaType.APPLICATION_JSON)
     public String updateCategory(@QueryParam("newCategoryName") String newCategoryName,
-                                 @QueryParam("categoryID") int categoryID)
-    {
-        Connection connection;
+                                 @QueryParam("categoryID") int categoryID) throws SQLException {
+        Connection connection = null;
         Boolean updated = false;
         String error = "";
         PreparedStatement updateCategory;
@@ -125,6 +128,10 @@ public class Categories {
         }catch (Exception e) {
             e.printStackTrace();
             error = e.getLocalizedMessage();
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
         JSONObject response = new JSONObject();
         response.put("updated", updated);
@@ -136,9 +143,8 @@ public class Categories {
     @GET
     @Path("/deleteCategory")
     @Produces(MediaType.APPLICATION_JSON)
-    public String deleteCategory(@QueryParam("categoryID") int categoryID)
-    {
-        Connection connection;
+    public String deleteCategory(@QueryParam("categoryID") int categoryID) throws SQLException {
+        Connection connection = null;
         Boolean deleted = false;
         String error = "";
         PreparedStatement deleteCategory;
@@ -157,6 +163,10 @@ public class Categories {
         }catch (Exception e) {
             e.printStackTrace();
             error = e.getLocalizedMessage();
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
         JSONObject response = new JSONObject();
         response.put("deleted", deleted);
@@ -170,7 +180,7 @@ public class Categories {
     @Produces(MediaType.APPLICATION_JSON)
     public String getCategoryByName(@QueryParam("categoryName") String categoryName)
     {
-        Connection connection;
+        Connection connection = null;
         Boolean found = false;
         int categoryID = -1;
         String error = "";
@@ -191,6 +201,14 @@ public class Categories {
         }catch (Exception e) {
             e.printStackTrace();
             error = e.getLocalizedMessage();
+        }finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         JSONObject response = new JSONObject();
         response.put("found", found);

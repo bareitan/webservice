@@ -21,10 +21,10 @@ public class Movies {
     @GET
     @Path("/getMovie")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getMovie(@QueryParam("movieID") Integer movieId) {
+    public String getMovie(@QueryParam("movieID") Integer movieId) throws SQLException {
 
         Gson gson = new Gson();
-        Connection connection;
+        Connection connection =null;
         PreparedStatement getStatement;
         Movie movie =null;
         try {
@@ -47,6 +47,10 @@ public class Movies {
 
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
         if (movie != null) {
             HashMap hm = new HashMap();
@@ -62,9 +66,9 @@ public class Movies {
     @GET
     @Path("/getMovieByCategory/{category}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getMovieByCategory(@PathParam("category") String category) {
+    public String getMovieByCategory(@PathParam("category") String category) throws SQLException {
         Gson gson = new Gson();
-        Connection connection;
+        Connection connection = null;
         PreparedStatement selectCategory;
         ArrayList<Movie> movies = new ArrayList<Movie>();
         String error = "";
@@ -102,6 +106,10 @@ public class Movies {
 
         } catch (Exception e) {
             error = e.getLocalizedMessage();
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
             HashMap hm = new HashMap();
             hm.put("Movies", movies);
@@ -118,10 +126,9 @@ public class Movies {
                            @QueryParam("overview") String overview,
                            @QueryParam("stock") Integer stock,
                            @QueryParam("thumbnail") String thumbnail,
-                           @QueryParam("categoryName") String categoryName)
-    {
+                           @QueryParam("categoryName") String categoryName) throws SQLException {
         Gson gson = new Gson();
-        Connection connection;
+        Connection connection = null;
         PreparedStatement insertMovie;
         PreparedStatement selectCategory;
         PreparedStatement insertCategory;
@@ -175,6 +182,10 @@ public class Movies {
             }
         }catch (Exception e) {
             movieResponse = new MovieResponse(true, e.getLocalizedMessage());
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
         return gson.toJson(movieResponse);
     }
@@ -188,10 +199,9 @@ public class Movies {
                            @QueryParam("overview") String overview,
                            @QueryParam("stock") Integer stock,
                            @QueryParam("thumbnail") String thumbnail,
-                           @QueryParam("categoryName") String categoryName)
-    {
+                           @QueryParam("categoryName") String categoryName) throws SQLException {
         Gson gson = new Gson();
-        Connection connection;
+        Connection connection = null;
         PreparedStatement updateMovie;
         PreparedStatement selectCategory;
         PreparedStatement insertCategory;
@@ -266,6 +276,10 @@ public class Movies {
             e.printStackTrace();
             movieResponse = new MovieResponse(false, e.getLocalizedMessage());
 
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
         return gson.toJson(movieResponse);
     }
@@ -274,10 +288,9 @@ public class Movies {
     @GET
     @Path("/deleteMovie")
     @Produces(MediaType.APPLICATION_JSON)
-    public String deleteMovie(@QueryParam("movieId") String movieId)
-    {
+    public String deleteMovie(@QueryParam("movieId") String movieId) throws SQLException {
         Gson gson = new Gson();
-        Connection connection;
+        Connection connection = null;
         PreparedStatement deleteMovie;
         MovieResponse deleteResponse;
         try {
@@ -296,6 +309,10 @@ public class Movies {
         }catch (Exception e) {
             e.printStackTrace();
             deleteResponse = new MovieResponse(false, e.getLocalizedMessage());
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
         return gson.toJson(deleteResponse);
     }

@@ -24,7 +24,7 @@ public class Register {
                           @QueryParam("lastName") String lastName,
                           @QueryParam("email") String email,
                           @QueryParam("isAdmin") Integer isAdmin,
-                          @QueryParam("password") String password) {
+                          @QueryParam("password") String password) throws SQLException {
 
         Gson gson = new Gson();
         Connection connection = null;
@@ -59,11 +59,7 @@ public class Register {
                 registerResponse = new RegisterResponse(false, e.toString());
             } finally {
                 if (connection != null) {
-                    try {
-                        connection.close();
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
+                    connection.close();
                 }
             }
         } else {

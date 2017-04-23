@@ -4,18 +4,13 @@ package com.bareitan.videorent;
  * Created by bareitan on 31/03/2017.
  */
 import com.google.gson.Gson;
-
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+
 
 
 @Path("/comments")
@@ -24,9 +19,9 @@ public class Comments {
     @GET
     @Path("{movieid}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getAllCommentsForMovie(@PathParam("movieid") String movieId) {
+    public String getAllCommentsForMovie(@PathParam("movieid") String movieId) throws SQLException {
         Gson gson = new Gson();
-        Connection connection;
+        Connection connection = null;
         PreparedStatement selectComments;
         ArrayList<Comment> comments = new ArrayList<Comment>();
         String error = "";
@@ -34,8 +29,9 @@ public class Comments {
 
         try {
             connection = DBConnection.createConnection();
-            String select = "SELECT CommentText,Rating, FirstName,LastName FROM comments AS C left join users AS U " +
-                    "ON C.UserID= U.UserID WHERE C.MovieID = ?";
+            String select = "SELECT CommentText,Rating, FirstName,LastName, C.UserID, CommentID FROM comments AS C left join users AS U " +
+                    "ON C.UserID= U.UserID WHERE C.MovieID = ?" +
+                    " ORDER BY CommentID DESC ";
 
             selectComments = connection.prepareStatement(select);
             selectComments.setString(1, movieId);
@@ -46,12 +42,18 @@ public class Comments {
                         new Comment(
                                 rs.getString("CommentText"),
                                 rs.getString("FirstName") + " " + rs.getString("LastName"),
-                                rs.getInt("Rating")
+                                rs.getInt("Rating"),
+                                rs.getInt("UserID"),
+                                rs.getInt("CommentID")
                         ));
             }
 
         } catch (Exception e) {
             error = e.getLocalizedMessage();
+        }finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
         HashMap hm = new HashMap();
         hm.put("Comments", comments);
@@ -65,8 +67,7 @@ public class Comments {
     public String addCommentToMovie(@PathParam("movieid") String movieId,
                                     @PathParam("userid") String userId,
                                     @PathParam("text") String text,
-                                    @PathParam("rating") String rating)
-    {
+                                    @PathParam("rating") String rating) throws SQLException {
         Gson gson = new Gson();
         Connection connection = null;
         PreparedStatement insertComment = null;
@@ -96,11 +97,7 @@ public class Comments {
                 addCommentResponse = new AddCommentResponse(false, e.getLocalizedMessage());
             } finally {
                 if (connection != null) {
-                    try {
-                        connection.close();
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
+                    connection.close();
                 }
             }
         } else {
@@ -109,16 +106,60 @@ public class Comments {
         return gson.toJson(addCommentResponse);
     }
 
+
+    @DELETE
+    @Path("{commentid}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String addCommentToMovie(@PathParam("commentid") String commentId) throws SQLException {
+        Gson gson = new Gson();
+        Connection connection = null;
+        PreparedStatement deleteComment = null;
+        DeleteCommentResponse deleteCommentResponse = null;
+
+
+        if (commentId != "") {
+            try {
+                connection = DBConnection.createConnection();
+                deleteComment = connection.prepareStatement(
+                        "DELETE FROM COMMENTS WHERE CommentID = ?");
+
+                deleteComment.setString(1, commentId);
+
+                int records = deleteComment.executeUpdate();
+                if (records > 0) {
+                    deleteCommentResponse = new DeleteCommentResponse(true, "");
+                } else {
+                    deleteCommentResponse = new DeleteCommentResponse(false, "Couldn't delete comment.");
+                }
+            }
+            catch (Exception e) {
+                deleteCommentResponse = new DeleteCommentResponse(false, e.getLocalizedMessage());
+            } finally {
+                if (connection != null) {
+                    connection.close();
+                }
+            }
+        } else {
+            deleteCommentResponse = new DeleteCommentResponse(false, "Mandatory values were not provided.");
+        }
+        return gson.toJson(deleteCommentResponse);
+    }
+
+
     public class Comment{
 
         String text;
         String userName;
+        int userId;
         int rating;
+        int commentId;
 
-        public Comment(String text, String userName, int rating) {
+        public Comment(String text, String userName, int rating, int userId, int commentId) {
             this.text = text;
             this.userName = userName;
             this.rating = rating;
+            this.userId = userId;
+            this.commentId = commentId;
         }
 
 
@@ -129,6 +170,16 @@ public class Comments {
 
         public AddCommentResponse(Boolean added, String error) {
             this.added = added;
+            this.error = error;
+        }
+    }
+
+    class DeleteCommentResponse {
+        public Boolean deleted;
+        public String error;
+
+        public DeleteCommentResponse(Boolean deleted, String error) {
+            this.deleted = deleted;
             this.error = error;
         }
     }

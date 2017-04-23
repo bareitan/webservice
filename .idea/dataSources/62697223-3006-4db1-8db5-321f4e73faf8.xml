@@ -65,10 +65,10 @@
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="24" parent="10" name="MovieID">
+    <index id="24" parent="10" name="comments_ibfk_2">
       <ColNames>MovieID</ColNames>
     </index>
-    <index id="25" parent="10" name="UserID">
+    <index id="25" parent="10" name="comments_ibfk_1">
       <ColNames>UserID</ColNames>
     </index>
     <key id="26" parent="10" name="PRIMARY">
@@ -81,12 +81,14 @@
       <RefSchemaName>video_db</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>UserID</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="28" parent="10" name="comments_ibfk_2">
       <ColNames>MovieID</ColNames>
       <RefSchemaName>video_db</RefSchemaName>
       <RefTableName>movies</RefTableName>
       <RefColNames>MovieID</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="29" parent="11" name="MovieID">
       <Position>1</Position>
@@ -105,7 +107,7 @@
     </column>
     <column id="32" parent="11" name="Overview">
       <Position>3</Position>
-      <DataType>varchar(500)|0</DataType>
+      <DataType>varchar(3000)|0</DataType>
     </column>
     <column id="33" parent="11" name="Stock">
       <Position>5</Position>
